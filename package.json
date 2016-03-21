@@ -8,7 +8,7 @@
   "scripts": {
     "start": "hexo server --open",
     "build": "hexo clean && hexo generate",
-    "deploy": "gh-pages -d public"
+    "deploy": "./scripts/deploy.sh"
   },
   "dependencies": {
     "hexo": "^3.2.0",

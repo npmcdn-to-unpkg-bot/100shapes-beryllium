@@ -1,16 +1,22 @@
 language: node_js
 sudo: false
+node_js:
+  - 4
 branches:
   only:
   - master
-cache:
-  directories:
-  - node_modules
-node_js:
-  - 4
-before_script:
-  - npm prune
-script: npm run deploy
+deploy:
+  # keep the build we just made with "npm test" (dist/)
+  skip_cleanup: true
+
+  # define the script to use for deployment
+  provider: script
+  script: ./bin/deploy.sh
+
+  # only run on one version of node (v5 here)
+  on:
+    branch: master
+    node: '4'
 env:
   global:
     secure: FKkDbEgOCW2eNAVhIn8oPxoDV+xGxiaqssNBFewcygtjcgYDtIMflAdN2NVcLlWM5TCG5HECH1oji4ntyiQH0fwJzL7MfmrJhGA124YS4qcaeJ9mOCr6TjbFFDNKq1kBHhMemjxANEcpZqSeOu6OZUJSTwHpm6QWce/U7S2DJE4FaKv2TusOjwaQT1uuYA2Omy2E5zyVgFwvN6heoKvsrSZst64EUlNiDbWywAh1AYUKcVAeReUu7rvaTTMXYxnU3y9l0Mhc/3ukvYCb01726qICatoNXy7IbVmB5DyeiI9IlrlBlNJOx4SOQ8seMghkKWObt+zG9NbXQ9IEp/aw9CwabVxcSMtmUFB+wt5QOh5nQprl6UTQAXC2bQj2/ayNgvLvYPR6yPXl6CgjLZAY9gVk1k+KY9GxVkj2FVj4B+QJIOQ005sz7lJjiCl1GDFMlaFp57oge7F7TVMu2nLGZFkRVkvjRXHTmO+tpJ4HP5pwuP7NH3Lai88n5oyyDloKZTBozTWoFsqrPIIrovY1w+hz3ywNw781SXUsNa+ao9ntvTQ9uPIMRQ4EyThpVaEldGVXK+EBdvQ+jNOWYE7tK/cG3MAbKqY88TRLMwjybTppcPsY91pOjn7UB/Nv9t2yy4/1TtErKWjGX6sWQH50qo1C2MOUzdNdo5GJf6s8IWU=

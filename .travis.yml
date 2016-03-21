@@ -8,7 +8,7 @@ cache:
     - node_modules
 node_js:
   - 4
-script: npm run build && npm run deploy
+script: npm run deploy
 env:
   global:
     secure: wxB8OLdb+Q1rCyuXCHwSAXprIMzZv0Jdu9Yk2QYxcwTwvFNBYzPAQs5YtWE9vFGhEqcN6qSIM/aOrC5JY2DAhxYYzOrwbmpuScApzBWbcy9FE99l3dZuNBMGgDROzRZuxrQG7+0ths6Hs5YU62m4R66XD9agC4g5TSalORnQaC7iOlJFhNiLyM+3hC53m/OTVIoCjCuc4f/sWOS4KZQcObQu220E+F2mELVHrUy1FGqAuiyQoZrhizQ84hltSYXPO+vDmE7pjCk57xYPj7o62zNKYuV55JfghH1YZZ7wtQKM4Y2R6UpYC/rDGGRWx4ldxijorHJAr1he+s4T898pLYuZk2mMi+LXkTXjsxG+GPcmTO6ZOyy3MIYxtIQzMJBxytjcIAR629BWPG4L3qnRrDBnuwnR2Hb5ERKq76L3a2Jl+orRNoK2Tl0HyAPoFQZivULMqLL8apQ0zptMYrow9bn6zNVOiY4bL2tFFJEm08meg0xAiMU6ka3QEczAmhYld+7c2hp8XyJcwXggh/ZAVITBnyFYrD9mZFCT6xZO388gSVnTVhllv+8esKhqIVVfCIBcDDOHzOv5EG3cusp9OKr1WP/wYse/GCJgjQmegIqXAiDZd1RJMOpgHlx4nJ2k/CQyhfJCbipgZpI9CP1Zs+GJ1F9V1jxIkTpD+A6Y4ls=

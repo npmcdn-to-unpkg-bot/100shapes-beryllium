@@ -9,4 +9,4 @@ cache:
 node_js:
   - 4
 
-script: npm run build
+script: npm run build && npm run deploy

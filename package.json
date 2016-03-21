@@ -7,7 +7,8 @@
   },
   "scripts": {
     "start": "server --open",
-    "build": "hexo clean && hexo generate"
+    "build": "hexo clean && hexo generate",
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "hexo": "^3.2.0",
@@ -18,5 +19,8 @@
     "hexo-renderer-jade": "^0.3.0",
     "hexo-renderer-marked": "^0.2.10",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.11.0"
   }
 }

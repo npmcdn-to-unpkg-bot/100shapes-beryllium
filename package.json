@@ -6,9 +6,10 @@
     "version": "3.2.0"
   },
   "scripts": {
-    "start": "hexo server --open",
-    "build": "hexo clean && hexo generate",
-    "deploy": "./scripts/deploy.sh"
+    "start": "./bin/start.sh",
+    "build": "./bin/build.sh",
+    "predeploy": "npm run build",
+    "deploy": "./bin/deploy.sh"
   },
   "dependencies": {
     "hexo": "^3.2.0",

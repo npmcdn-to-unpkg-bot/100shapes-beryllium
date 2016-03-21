@@ -3,5 +3,7 @@ html(lang="en")
     head
         title= page.title
     body
-        a(href="/2016/03/21/hello-world") Hello World
+        each post in site.posts.data
+            li
+                a(href=url_for(post.path)) #{post.title}
         block content

@@ -1,12 +1,12 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "100shapes-beryllium",
+  "version": "0.1.0",
   "private": true,
   "hexo": {
     "version": "3.2.0"
   },
   "scripts": {
-    "start": "server --open",
+    "start": "hexo server --open",
     "build": "hexo clean && hexo generate",
     "deploy": "gh-pages -d public"
   },

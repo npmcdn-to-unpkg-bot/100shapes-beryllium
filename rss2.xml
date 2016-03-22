@@ -3,13 +3,27 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Hexo</title>
+    <title>100 Shapes – Designing systems for people with people UX &amp; Design studio</title>
     <link>http://100shapes.com/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description></description>
-    <pubDate>Tue, 22 Mar 2016 08:19:13 GMT</pubDate>
+    <description>100 Shapes site design</description>
+    <pubDate>Tue, 22 Mar 2016 12:27:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>BBC Freebird</title>
+      <link>http://100shapes.com/2016/03/22/BBC-Freebird/</link>
+      <guid>http://100shapes.com/2016/03/22/BBC-Freebird/</guid>
+      <pubDate>Tue, 22 Mar 2016 12:03:18 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <content:encoded></content:encoded>
+      
+      <comments>http://100shapes.com/2016/03/22/BBC-Freebird/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>I&#39;m Important</title>

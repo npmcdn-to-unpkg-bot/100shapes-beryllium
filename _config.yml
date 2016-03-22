@@ -65,8 +65,8 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: beryllium
 feed:
-  type: atom
-  path: atom.xml
+  type: rss2
+  path: rss2.xml
   limit: false
 
 # Deployment

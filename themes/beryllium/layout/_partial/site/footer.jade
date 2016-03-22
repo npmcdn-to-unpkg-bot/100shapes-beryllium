@@ -1,10 +1,14 @@
-nav.footer-nav
-  ul.footer-nav__items
-    li.footer-nav__item
-      a(href=url_for("about")) About
-    li.footer-nav__item
-      a(href=url_for("archives")) Archive
-    li.footer-nav__item
-      a(href="http://github.com/widatama/hexo-jade-starter") Source
-    li.footer-nav__item
-      a(href=theme.rss ? theme.rss : config.root + "rss2.xml") Feed
+hr.mt1
+footer.max-width-4.mx-auto
+    .clearfix
+    ul.list-reset
+        li.inline-block.mr2
+            a(href=url_for("/")) Home
+        li.inline-block.mr2
+            a(href=url_for("enterprise-ux")) Enterprise UX
+        li.inline-block.mr2
+            a(href=url_for("labs")) Labs
+        li.inline-block.mr2
+            a(href=url_for("blog")) Blog
+        li.inline-block.mr2
+            a(href=theme.rss ? theme.rss : config.root + "rss2.xml") Feed

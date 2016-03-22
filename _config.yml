@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 100 Shapes – Designing systems for people with people UX & Design studio
-subtitle: A subtitle here
+title: 100 Shapes
+subtitle: Designing systems for people with people UX & Design studio.
 description: 100 Shapes site design
 author: John Doe
 language:
@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://100shapes.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: blog/:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -75,6 +75,10 @@ sitemap:
 
 category_generator:
   per_page: 10
+
+index_generator:
+  per_page: 10
+  order_by: -date
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

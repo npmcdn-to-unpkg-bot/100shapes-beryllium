@@ -1,8 +1,7 @@
 extends base
 
-prepend site_title
-  | #{page.title} &mdash;&nbsp;
-
 block site_body
-  include _partial/post/entry
-  include _partial/post/entry_pagination
+    article.max-width-4.mx-auto
+        .clearfix
+            include _partial/post/entry
+            include _partial/post/entry_pagination

@@ -7,9 +7,20 @@ html(lang="en")
     body
         header.max-width-3.mx-auto
             .clearfix
-                h1.h3.mb0
-                    a(href=config.root)= config.title
-                p.mt0= config.subtitle
+                .col.col-12
+                    h1.h3.mb0
+                        a(href=config.root)= config.title
+
+                .col
+                    p.mt0= config.subtitle
+
+                .col.col-right.right-align.ml2
+                    p.mt0
+                        a(href="mailto:hello@100shapes.com") hello@100shapes.com
+
+                .col.col-right.right-align
+                    p.mt0
+                        a(href="tel:+442037738175") +44 0203 7738 175
 
         hr
 

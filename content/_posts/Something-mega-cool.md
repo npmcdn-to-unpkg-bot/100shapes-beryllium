@@ -1,11 +1,9 @@
 ---
 title: Something mega cool
 date: 2016-03-21 23:44:25
-category:
-    - labs
 tags:
-    - data
-    - cool
+    - tech
+    - design
 ---
 
 # Will you work?

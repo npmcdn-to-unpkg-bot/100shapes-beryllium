@@ -9,8 +9,7 @@ block site_body
 
             section!= page.content
 
-            - var lab_items = site.categories.findOne({name: 'labs'}).posts.toArray()
-            each post in lab_items
+            each post in site.posts.toArray()
                 a(href=url_for(post.path)).border-box.border.p2.mb2.block
                     h1.h2= post.title
 

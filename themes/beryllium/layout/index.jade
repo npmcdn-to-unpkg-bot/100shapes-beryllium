@@ -1,14 +1,10 @@
 extends base
 
 block site_body
-    .max-width-4.mx-auto
+    article.max-width-4.mx-auto
         .clearfix
-            ol.list-reset
-                each post in page.posts.toArray()
-                    li
-                        article
-                            h2
-                                a(href=url_for(post.path))= post.title
-                            div!= post.excerpt
+            h1.h1= page.title
 
-            include _partial/post/list_pagination
+            div!= page.content
+
+            p hello

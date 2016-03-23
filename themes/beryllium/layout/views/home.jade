@@ -65,26 +65,18 @@ block site_body
             section.my4
                     h2 Labs
                     p.
-                        Our labs projects are like, amazing. Lorem ipsum dolor sit amet, consectetur adipiscin
+                        Our #[a(href="/labs") labs projects] are like, amazing. Lorem ipsum dolor sit amet,
+                        consectetur adipiscin
                         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                         minim veniam.
 
 
                     .mxn1.clearfix
-                        div.col.col-12.p1
-                            a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
-                                h3.h3.m0 Project title
-                                p.m0 Doing things for business
-
-                        div.col.col-12.p1
-                            a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
-                                h3.h3.m0 Project title
-                                p.m0 Doing things for business
-
-                        div.col.col-12.p1
-                            a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
-                                h3.h3.m0 Project title
-                                p.m0 Doing things for business
+                        each project in site.categories.findOne({name: 'labs'}).posts.toArray()
+                            div.col.col-12.p1
+                                a(href=url_for(project.path)).border-box.border.rounded.px4.py2.block
+                                    h3.h3.m0= project.title
+                                    p.m0= project.subtitle
 
 
                 section.my4
@@ -97,13 +89,13 @@ block site_body
                     .mxn1.clearfix
                         div.col.col-12.p1
                             a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
-                                h3.m0 Project title
-                                p.m0 Doing things for business
+                                h3.m0 Climb.Social
+                                p.m0 Social Media anywhere you need it
 
                         div.col.col-12.p1
                             a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
-                                h3.m0 Project title
-                                p.m0 Doing things for business
+                                h3.m0 Wifime
+                                p.m0 Cool things with Wifi
 
 
             section.my4

@@ -1,7 +1,9 @@
 ---
 title: {{ title }}
-seo_title:
 subtitle:
+seo_title:
 description:
 date: {{ date }}
+featured: false
+tags:
 ---

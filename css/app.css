@@ -2,6 +2,9 @@
 
   Load all of the css/less files
 */
+html {
+  overflow-y: scroll;
+}
 body {
   font-family: "Brandon Grotesque";
 }

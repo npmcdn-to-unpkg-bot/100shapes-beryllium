@@ -6,7 +6,11 @@ notifications:
   email: false
 cache:
   directories:
-  - node_modules
+  - node_modules/hexo
+  - node_modules/hexo-generator-feed
+  - node_modules/hexo-renderer-jade
+  - node_modules/hexo-renderer-less
+  - node_modules/hexo-server
 branches:
   only:
   - master

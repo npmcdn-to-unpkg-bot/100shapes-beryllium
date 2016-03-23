@@ -1,7 +1,7 @@
 # 100shapes-beryllium
 "Beryllium" release of the 100 Shapes website
 
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)](https://github.com/100Shapes/100shapes-beryllium)
+[![Travis](https://img.shields.io/travis/100Shapes/100shapes-beryllium.svg?style=flat-square)](https://github.com/100Shapes/100shapes-beryllium)
 
 ## Template vars
 

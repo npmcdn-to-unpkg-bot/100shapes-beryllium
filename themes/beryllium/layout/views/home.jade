@@ -3,14 +3,121 @@ extends ../base
 
 
 block site_body
-    article.max-width-4.mx-auto
+    div.max-width-3.mx-auto
         .clearfix
-            h1.h1= page.title
+            h1.h1= page.seo_title
 
             section!= page.content
 
-            each post in site.posts.toArray()
-                a(href=url_for(post.path)).border-box.border.p2.mb2.block
-                    h1.h2= post.title
+            section.my4
+                h2 Enterprise UX things
+                p.
+                    All things Enterprise UX solutions. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam.
+
+                .mxn1.clearfix
+                    div.sm-col.sm-col-12.p1
+                        a(href=url_for('/enterprise-ux')).border-box.border.p4.block
+                            h3.h1.m0 Creating better business systems
+                            p.mt0 People-centered design that boosts your bottomline.
+
+                    div.sm-col.sm-col-12.md-col-6.p1
+                        a(href=url_for('/enterprise-ux')).border-box.border.p4.block
+                            h3.h2.m0 Something here
+                            p.m0 Doing things for business
+
+                    div.sm-col.sm-col-12.md-col-6.p1
+                        a(href=url_for('/enterprise-ux')).border-box.border.p4.block
+                            h3.h2.m0 Another thing
+                            p.m0 Doing things for business
+
+            section.my4
+                h2 Recent Projects
+                p.
+                    Various projects. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam.
+
+                .mxn1.clearfix
+                    div.col.col-12.p1
+                        a(href=url_for('/work/BBC-freebird')).border-box.border.p4.block
+                            h3.h1.m0 Transforming the way people transform
+                            p.m0 Doing things for business and something else really cool.
+
+                    div.col.col-12.p1
+                        a(href=url_for('/work/BBC-freebird')).border-box.border.p4.block
+                            h3.h1.m0 Transforming the way people transform
+                            p.m0 Doing things for business and something else really cool.
+
+                    div.col.col-12.p1
+                        a(href=url_for('/work/BBC-freebird')).border-box.border.p4.block
+                            h3.h1.m0 Transforming the way people transform
+                            p.m0 Doing things for business and something else really cool.
+
+                    div.col.col-12.p1
+                        a(href=url_for('/work/BBC-freebird')).border-box.border.p4.block.xs-hide.sm-hide
+                            h3.h1.m0 Transforming the way people transform
+                            p.m0 Doing things for business and something else really cool.
+
+
+
+            section.my4
+                    h2 Labs
+                    p.
+                        Our labs projects are like, amazing. Lorem ipsum dolor sit amet, consectetur adipiscin
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam.
+
+
+                    .mxn1.clearfix
+                        div.col.col-12.p1
+                            a(href=url_for('/enterprise-ux')).border-box.border.px4.py2.block
+                                h3.h3.m0 Project title
+                                p.m0 Doing things for business
+
+                        div.col.col-12.p1
+                            a(href=url_for('/enterprise-ux')).border-box.border.px4.py2.block
+                                h3.h3.m0 Project title
+                                p.m0 Doing things for business
+
+                        div.col.col-12.p1
+                            a(href=url_for('/enterprise-ux')).border-box.border.px4.py2.block
+                                h3.h3.m0 Project title
+                                p.m0 Doing things for business
+
+
+                section.my4
+                    h2 Ventures
+                    p.
+                        Our own products & services. Our labs projects are like, amazing. Lorem ipsum dolor sit amet, consectetur adipiscin
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam.
+
+                    .mxn1.clearfix
+                        div.col.col-12.p1
+                            a(href=url_for('/enterprise-ux')).border-box.border.px4.py2.block
+                                h3.m0 Project title
+                                p.m0 Doing things for business
+
+                        div.col.col-12.p1
+                            a(href=url_for('/enterprise-ux')).border-box.border.px4.py2.block
+                                h3.m0 Project title
+                                p.m0 Doing things for business
+
+
+            section.my4
+                    h2 Blog
+                    p.
+                        Things we've written recently. Our labs projects are like, amazing. Lorem ipsum dolor sit amet,
+                        consectetur adipiscin elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam.
+
+                    .mxn1.clearfix
+                        each post in site.posts.toArray()
+                            div.col.col-12.p1
+                                a(href=url_for(post.path)).border-box.border.px4.py2.block
+                                    h3.m0= post.title
+                                    p.m0 Doing things for business
 
 

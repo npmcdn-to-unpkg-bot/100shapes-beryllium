@@ -1,8 +1,6 @@
 extends ../base
 
 block site_body
-    div.max-width-3.mx-auto
-        .clearfix
-            h1.h1= page.seo_title
+    h1.h1= page.seo_title
 
-            div!= page.content
+    div!= page.content

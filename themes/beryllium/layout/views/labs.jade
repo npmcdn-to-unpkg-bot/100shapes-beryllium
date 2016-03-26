@@ -1,17 +1,13 @@
 extends ../base
 
-
-
 block site_body
-    article.max-width-3.mx-auto
-        .clearfix
-            h1.h1= page.title
+    h1= page.title
 
-            section!= page.content
+    section!= page.content
 
-            - var lab_items = site.categories.findOne({name: 'labs'}).posts.toArray()
-            each post in lab_items
-                a(href=url_for(post.path)).border-box.border.rounded.p2.mb2.block
-                    h1.h2= post.title
+    - var lab_items = site.categories.findOne({name: 'labs'}).posts.toArray()
+    each post in lab_items
+        a(href=url_for(post.path)).border-box.border.rounded.p2.mb2.block
+            h1.h2= post.title
 
 

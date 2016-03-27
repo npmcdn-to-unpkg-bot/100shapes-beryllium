@@ -3,12 +3,15 @@ extends ../base
 
 
 block site_body
-    h1.h1= page.seo_title
+    .col.col-12.px2.my4
+        h1.h1= page.seo_title
 
-    p.
-        Opportunity to write something here as the introduction to the whole page.
+        p.full-width.
+            Opportunity to write something here as the introduction to the whole page. lots
+            more text here. something really interested too. I have a special class so I
+            span the full width.
 
-    section.my4
+    section.col.col-12.px2.mb4
         h2 Enterprise UX things
         p.
             All things Enterprise UX solutions. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -17,22 +20,22 @@ block site_body
 
         .mxn1.clearfix
             .sm-col.sm-col-12.p1
-                a(href=url_for('/enterprise-ux')).border-box.border.rounded.p4.block
-                    h3.h1.m0 Creating better business systems
-                    p.mt0 People-centered design that boosts your bottomline.
+                a(href=url_for('/enterprise-ux')).border-box.border.rounded.px3.py4.block
+                    h3.h1.m0 Creating better business systems for internal tools
+                    p.mb0 People-centered design that boosts your bottomline.
 
             .sm-col.sm-col-12.md-col-6.p1
-                a(href=url_for('/enterprise-ux')).border-box.border.rounded.p4.block
-                    h3.h2.m0 Something here
-                    p.m0 Doing things for business
+                a(href=url_for('/enterprise-ux')).border-box.border.rounded.p3.block
+                    h3.h2.m0 Something here slightly longer but interesting
+                    p.mb0 Doing things for business
 
             .sm-col.sm-col-12.md-col-6.p1
-                a(href=url_for('/enterprise-ux')).border-box.border.rounded.p4.block
-                    h3.h2.m0 Another thing
-                    p.m0 Doing things for business
+                a(href=url_for('/enterprise-ux')).border-box.border.rounded.p3.block
+                    h3.h2.m0 Another thing that's really interesting
+                    p.mb0 Doing things for business
 
-    section.my4
-        h2 Recent Projects
+    section.col.col-12.px2.mb4
+        h2 Our work
         p.
             Various projects. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -40,28 +43,28 @@ block site_body
 
         .mxn1.clearfix
             .col.col-12.p1
-                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.p4.block
+                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Transforming the way people transform
                     p.m0 Doing things for business and something else really cool.
 
             .col.col-12.p1
-                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.p4.block
+                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Transforming the way people transform
                     p.m0 Doing things for business and something else really cool.
 
             .col.col-12.p1
-                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.p4.block
+                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Transforming the way people transform
                     p.m0 Doing things for business and something else really cool.
 
             .col.col-12.p1
-                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.p4.block.xs-hide.sm-hide
+                a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block.xs-hide.sm-hide
                     h3.h1.m0 Transforming the way people transform
                     p.m0 Doing things for business and something else really cool.
 
 
 
-    section.my4
+    section.col.col-12.px2.mb4
         h2 Labs
         p.
             Our #[a(href="/labs") labs projects] are like, amazing. Lorem ipsum dolor sit amet,
@@ -71,14 +74,14 @@ block site_body
 
 
         .mxn1.clearfix
-            each project in site.categories.findOne({name: 'labs'}).posts.toArray()
+            each project in site.categories.findOne({name: 'labs'}).posts.limit(3).sort('date', -1).toArray()
                 .col.col-12.p1
-                    a(href=url_for(project.path)).border-box.border.rounded.px4.py2.block
+                    a(href=url_for(project.path)).border-box.border.rounded.px3.py2.block
                         h3.h3.m0= project.title
                         p.m0= project.subtitle
 
 
-    section.my4
+    section.col.col-12.px2.mb4
         h2 Ventures
         p.
             Our own products & services. Our labs projects are like, amazing. Lorem ipsum dolor sit amet, consectetur adipiscin
@@ -87,17 +90,22 @@ block site_body
 
         .mxn1.clearfix
             .col.col-12.p1
-                a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
+                a(href=url_for('/enterprise-ux')).border-box.border.rounded.px3.py2.block
                     h3.m0 Climb.Social
                     p.m0 Social Media anywhere you need it
 
             .col.col-12.p1
-                a(href=url_for('/enterprise-ux')).border-box.border.rounded.px4.py2.block
+                a(href=url_for('/enterprise-ux')).border-box.border.rounded.px3.py2.block
                     h3.m0 Wifime
                     p.m0 Cool things with Wifi
 
+            .col.col-12.p1
+                a(href=url_for('/enterprise-ux')).border-box.border.rounded.px3.py2.block
+                    h3.m0 Allo' Allo'
+                    p.m0 Project allocation plans for service agencies
 
-    section.my4
+
+    section.col.col-12.px2.mb4
         h2 Blog
         p.
             Things we've written recently. Our labs projects are like, amazing. Lorem ipsum dolor sit amet,
@@ -105,9 +113,9 @@ block site_body
             enim ad minim veniam.
 
         .mxn1.clearfix
-            each post in site.posts.toArray()
+            each post in site.posts.limit(3).sort('date', -1).toArray()
                 .col.col-12.p1
-                    a(href=url_for(post.path)).border-box.border.rounded.px4.py2.block
+                    a(href=url_for(post.path)).border-box.border.rounded.px3.py2.block
                         h3.m0= post.title
                         p.m0 Doing things for business
 

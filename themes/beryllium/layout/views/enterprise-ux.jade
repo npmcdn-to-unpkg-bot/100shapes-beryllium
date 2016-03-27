@@ -3,4 +3,15 @@ extends ../base
 block site_body
     h1= page.title
 
-    section!= page.content
+    div
+        p Something here
+
+        p Here's some links to related articles on the subject:
+
+        ul
+            li
+                a(href="./dog") Improve your bottom line
+            li
+                a(href="./dog") Do something else
+            li
+                a(href="./dog") Return on investment

@@ -4,6 +4,8 @@ date: 2016-03-21 23:44:25
 tags:
     - tech
     - design
+categories:
+    - lolz    
 ---
 
 # Will you work?

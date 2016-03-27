@@ -1,6 +1,6 @@
-nav.pagination
-  if(page.prev)
-    a.entry-pagination__link.entry-pagination__link--prev(href=url_for(page.prev.path), title=page.prev.title)!= "&#10094; " + __("prev")
+nav.flex.block.m2.center
+    if(page.prev)
+        a.flex-auto.border.p2(href=url_for(page.prev.path), title=page.prev.title)!= '&#10094; ' + page.prev.title
 
-  if(page.next)
-    a.entry-pagination__link.entry-pagination__link--next(href=url_for(page.next.path), title=page.next.title)!= __("next") + " &#10095; "
+    if(page.next)
+        a.flex-auto.border.p2(href=url_for(page.next.path), title=page.next.title)!= page.next.title + ' ' +''+'&#10095;'

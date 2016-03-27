@@ -13,7 +13,7 @@ html(lang="en")
                 .col.px2
                     p.mt0= config.subtitle
 
-                .col.col-right.right-align.ml2
+                .col.col-right.right-align.mx2
                     p.mt0
                         a(href="mailto:hello@100shapes.com") hello@100shapes.com
 
@@ -23,7 +23,14 @@ html(lang="en")
 
         hr
 
-        div.max-width-3.mx-auto
+        .max-width-3.mx-auto
+            .clearfix
+                .col.col-12.px2
+                    include _partial/site/menu
+
+        hr
+
+        .max-width-3.mx-auto
             .clearfix
                 block site_body
 

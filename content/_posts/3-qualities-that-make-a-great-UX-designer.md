@@ -6,3 +6,5 @@ seo_title:
 description:
 tags:
 ---
+
+Some content here

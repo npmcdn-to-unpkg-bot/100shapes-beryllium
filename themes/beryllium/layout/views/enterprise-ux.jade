@@ -1,17 +1,18 @@
 extends ../base
 
 block site_body
-    h1= page.title
+    .col.col-12.p2
+        h1= page.title
 
-    div
-        p Something here
+        div
+            p Something here
 
-        p Here's some links to related articles on the subject:
+            p Here's some links to related articles on the subject:
 
-        ul
-            li
-                a(href="./dog") Improve your bottom line
-            li
-                a(href="./dog") Do something else
-            li
-                a(href="./dog") Return on investment
+            ul
+                li
+                    a(href=href=url_for('/enterprise-ux/raise-your-bottom-line')) Improve your bottom line
+                li
+                    a(href=href=url_for('/enterprise-ux/raise-your-bottom-line')) Something else
+                li
+                    a(href=href=url_for('/enterprise-ux/raise-your-bottom-line')) And finally

@@ -3,16 +3,31 @@ extends ../base
 
 
 block site_body
-    .col.col-12.px2.my4
+    .col.col-12.px2.mt4.mb2
         h1.h1= page.seo_title
 
-        p.full-width.
+        p.full-width.lead.
             Opportunity to write something here as the introduction to the whole page. lots
             more text here. something really interested too. I have a special class so I
             span the full width.
 
+    .col.col-12.px2.mb4
+        p.inline-block.mr2 On this page:
+            ol.list-reset.inline
+                li.inline-block.mr2
+                    a(href="#enterprise-ux") Enterprise UX
+                li.inline-block.mr2
+                    a(href="#projects") Projects
+                li.inline-block.mr2
+                    a(href="#labs") Lab projects
+                li.inline-block.mr2
+                    a(href="#ventures") Latest Ventures
+                li.inline-block.mr2
+                    a(href="#blog") Recent blog posts
+
+
     section.col.col-12.px2.mb4
-        h2 Enterprise UX things
+        h2#enterprise-ux Enterprise UX
         p.
             All things Enterprise UX solutions. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -22,20 +37,23 @@ block site_body
             .sm-col.sm-col-12.p1
                 a(href=url_for('/enterprise-ux')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Creating better business systems for internal tools
-                    p.mb0 People-centered design that boosts your bottomline.
+                    p.mb0.lead People-centered design that boosts your bottomline.
 
             .sm-col.sm-col-12.md-col-6.p1
                 a(href=url_for('/enterprise-ux')).border-box.border.rounded.p3.block
-                    h3.h2.m0 Something here slightly longer but interesting
+                    h3.h2.m0 Invest in the systems that give you the&nbsp;
+                        i competitive edge
                     p.mb0 Doing things for business
 
             .sm-col.sm-col-12.md-col-6.p1
                 a(href=url_for('/enterprise-ux')).border-box.border.rounded.p3.block
-                    h3.h2.m0 Another thing that's really interesting
+                    h3.h2.m0 Calculating the&nbsp;
+                        i ROI
+                        | &nbsp;of your internal systems
                     p.mb0 Doing things for business
 
     section.col.col-12.px2.mb4
-        h2 Our work
+        h2#projects Typical projects
         p.
             Various projects. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -45,27 +63,27 @@ block site_body
             .col.col-12.p1
                 a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Transforming the way people transform
-                    p.m0 Doing things for business and something else really cool.
+                    p.mb0.lead Doing things for business and something else really cool.
 
             .col.col-12.p1
                 a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Transforming the way people transform
-                    p.m0 Doing things for business and something else really cool.
+                    p.mb0.lead Doing things for business and something else really cool.
 
             .col.col-12.p1
                 a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block
                     h3.h1.m0 Transforming the way people transform
-                    p.m0 Doing things for business and something else really cool.
+                    p.mb0.lead Doing things for business and something else really cool.
 
             .col.col-12.p1
                 a(href=url_for('/work/BBC-freebird')).border-box.border.rounded.px3.py4.block.xs-hide.sm-hide
                     h3.h1.m0 Transforming the way people transform
-                    p.m0 Doing things for business and something else really cool.
+                    p.mb0.lead Doing things for business and something else really cool.
 
 
 
     section.col.col-12.px2.mb4
-        h2 Labs
+        h2#labs Labs
         p.
             Our #[a(href="/labs") labs projects] are like, amazing. Lorem ipsum dolor sit amet,
             consectetur adipiscin
@@ -76,13 +94,13 @@ block site_body
         .mxn1.clearfix
             each project in site.categories.findOne({name: 'labs'}).posts.limit(3).sort('date', -1).toArray()
                 .col.col-12.p1
-                    a(href=url_for(project.path)).border-box.border.rounded.px3.py2.block
+                    a(href=url_for(project.path)).border-box.border.rounded.p3.block
                         h3.h3.m0= project.title
                         p.m0= project.subtitle
 
 
     section.col.col-12.px2.mb4
-        h2 Ventures
+        h2#ventures Ventures
         p.
             Our own products & services. Our labs projects are like, amazing. Lorem ipsum dolor sit amet, consectetur adipiscin
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -106,7 +124,7 @@ block site_body
 
 
     section.col.col-12.px2.mb4
-        h2 Blog
+        h2#blog Blog
         p.
             Things we've written recently. Our labs projects are like, amazing. Lorem ipsum dolor sit amet,
             consectetur adipiscin elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

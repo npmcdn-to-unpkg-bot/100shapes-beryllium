@@ -1,12 +1,13 @@
 extends ../base
 
 block site_body
-    h1.h1= page.title
+    .col.col-12.p2
+        h1.h1= page.title
 
-    div!= page.content
+        div!= page.content
 
-    each post in site.posts.toArray()
-        a(href=url_for(post.path)).border-box.border.p2.mb2.block
-            h1.h2= post.title
+        each post in site.posts.toArray()
+            a(href=url_for(post.path)).border-box.border.p2.mb2.block
+                h1.h2= post.title
 
-    include ../_partial/post/list_pagination
+        include ../_partial/post/list_pagination

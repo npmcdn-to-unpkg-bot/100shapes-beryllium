@@ -5,21 +5,21 @@ html(lang="en")
         include _partial/site/head
 
     body
-        header.max-width-3.mx-auto
+        header.max-width-3.mx-auto.m2
             .clearfix
                 .col.col-12.px2
                     a(href=config.root)= config.title
 
-                .col.px2
-                    p.mt0= config.subtitle
+                .col.col-12.px2
+                    .col.sm-col-12.md-col-6
+                        p.mt0= config.subtitle
 
-                .col.col-right.right-align.mx2
-                    p.mt0
-                        a(href="mailto:hello@100shapes.com") hello@100shapes.com
-
-                .col.col-right.right-align
-                    p.mt0
-                        a(href="tel:+442037738175") +44 0203 7738 175
+                    .col.sm-col-12.md-col-6.md-right-align
+                        ul.list-reset.m0
+                            li.inline-block.mr2
+                                a(href="mailto:hello@100shapes.com") hello@100shapes.com
+                            li.inline-block
+                                a(href="tel:+442037738175") +44 0203 7738 175
 
         hr
 

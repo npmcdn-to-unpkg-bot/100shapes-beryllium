@@ -5,8 +5,8 @@ mixin postDate(date)
 mixin postCategory(categories)
 
   if categories.length > 0
-    | &ensp;in
+    | &nbsp;in
     span.post__categories
       each category in categories.toArray()
-        | &ensp;
+        | &nbsp;
         a.post__category(href=url_for(category.path))= category.name

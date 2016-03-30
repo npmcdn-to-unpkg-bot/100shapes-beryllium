@@ -1,6 +1,6 @@
 ---
 title: {{ title }}
-seo_title:
+long_title:
 subtitle:
 description:
 date: {{ date }}

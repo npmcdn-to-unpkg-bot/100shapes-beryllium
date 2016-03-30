@@ -2,9 +2,13 @@ extends ../base
 
 block site_body
     .col.col-12.p2
-        h1.h1= page.title
+        if page.long_title
+            h1= page.long_title
+        else
+            h1= page.title
 
-        div!= page.content
+        p.lead.
+            We write interesting things here
 
         each post in site.posts.toArray()
             a(href=url_for(post.path)).border-box.border.p2.mb2.block

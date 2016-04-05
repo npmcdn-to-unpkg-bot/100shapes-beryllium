@@ -1,6 +1,7 @@
 ---
 title: {{ title }}
 long_title:
-description: 
+description:
+author_email: chris@100shapes.com
 tags:
 ---

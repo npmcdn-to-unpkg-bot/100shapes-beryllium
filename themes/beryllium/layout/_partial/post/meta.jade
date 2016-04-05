@@ -1,12 +1,16 @@
+mixin postAuthor(email)
+    p.post__author!= email
+    img(src=gravatar(email))
+
 mixin postDate(date)
-  span.post__date
+  p.post__date
     = date.format(config.date_format)
 
 mixin postCategory(categories)
 
   if categories.length > 0
     | &nbsp;in
-    span.post__categories
+    p.post__categories
       each category in categories.toArray()
         | &nbsp;
         a.post__category(href=url_for(category.path))= category.name
